@@ -1,10 +1,3 @@
-@font-face {
-  font-family: "Smeshariki";
-  font-weight: 400;
-  font-style: normal;
-  src: url(../fonts/SmesharikiFont.woff2) format("woff2"),
-  url(../fonts/SmesharikiFont.woff) format("woff");
-}
 html{
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -19,13 +12,24 @@ body{
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #fff;
-  color: #222;
-  font-family: "Arial",san-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  background-color: #EFFAFA;
+  color: #2B3939;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
   padding: 0;
   margin: 0;
+}
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 img{
   max-width: 100%;
@@ -34,12 +38,144 @@ img{
 /*  CONTAINER */
 .container{
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1110px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
+.site-header{
+  height: 156px;
+  background-color: rgba(92, 165, 165, 1);
+  box-sizing: border-box;
+}
 .main-content{
   flex-grow: 1;
+  padding-top: 76px;
+  padding-bottom: 120px;
+}
+.job-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.job-item {
+  background-color: #FFFFFF;
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.border{
+  border-left:6px solid#5CA5A5 ;
+}
+.job-item:not(:last-child){
+  margin-bottom:12px ;
+}
+.job-item-cage{
+  display: flex;
+  align-items: center;
+}
+.job-item-img-wrapper{
+  display: flex;
+}
+.job-item-img {
+  width: 88px;
+  height: 88px;
+  padding: 32px  24px 32px 35px;
+}
+.job-item-info {
+  width: 266px;
+  position: relative;
+}
+.job-item-info-name {
+  color: #5CA5A5;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+.job-item-info-badges {
+  margin-bottom: 12px;
+  position: absolute;
+  top: 0px;
+  left: 82px;
+}
+.job-item-info-badge {
+  font-size: 11px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: -0.0846154px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 6px 8px;
+}
+.badge-green {
+  background-color: #5CA5A5;
+  border-radius: 12px;
+}
+.badge-black {
+  background-color: #2B3939;
+  border-radius: 12px;
+}
+.job-item-info-degre{
+  margin-top: 0px;
+  padding-top: 12px;
+}
+.job-item-info-degre-link {
+  margin-top: 0px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #2B3939;
+  text-decoration: none;
+}
+.job-item-facts {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+.job-item-fact{
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.115385px;
+  color: #7C8F8F;
+}
+.job-item-fact:not(:last-child){
+  margin-right: 36px;
+}
+.job-item-tags {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  right: 40px;
+}
+.job-item-tag {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color: #5CA5A5;
+  background-color:   #dcecef;
+  mix-blend-mode: normal;
+  border-radius: 4px;
+  padding: 4px 8px;
+  transition: color, background-color,  0.6s ease;
+}
+.job-item-tag:hover{
+  color: white;
+  background-color: #5CA5A5;
+}
+.job-item-tag:active{
+  opacity: 0.6;
+}
+.job-item-tag:not(:last-child){
+  margin-right: 16px;
 }
